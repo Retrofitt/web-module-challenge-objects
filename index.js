@@ -126,11 +126,11 @@ Use the getReviewByIndex function below to do the following:
 */
 
 
-function getReviewByIndex(array, i) {
-  return `${array[i].name} gave the restaurant a ${array[i].rating} star review, and their feedback was: ${array[i].feedback}`
+function getReviewByIndex(array) {
+  return `${array[2].name} gave the restaurant a ${array[2].rating} star review, and their feedback was: ${array[2].feedback}`
 }
 
-console.log("Task 6", getReviewByIndex(reviews, 2))
+console.log("Task 6", getReviewByIndex(reviews))
   
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
