@@ -1,6 +1,5 @@
 const functions  = require('./index.js');
 const { burger } = require('./index.js');
-
 let reviews;
 beforeEach(()=>{
 reviews = [
@@ -14,19 +13,16 @@ reviews = [
     {name:"Reyna", rating: 3.5, feedback: "this place is chill with really cool people, great for getting work done on weekdays"},
 ]
 })
-
 describe('fooFunction', ()=>{
     it('foo returns foo', ()=>{
         expect(functions.foo()).toBe('bar');
     })
 });
-
 describe('createMenuItem', ()=>{
     it('createMenuItem returns object', ()=>{
         expect(functions.createMenuItem('taco', 8, 'lunch')).toEqual({name: 'taco', price: 8, category:'lunch'});
     })
 });
-
 // test burger method discount here 
 describe('burger.discount', ()=>{
     it('discount for teacher', ()=>{
@@ -39,7 +35,6 @@ describe('burger.discount', ()=>{
         expect(burger.discount('public')).toBe(16.2);
     })
 });
-
 describe('addReview', ()=>{
     it('addReview returns an array of objects', ()=>{
         expect(functions.addReview(reviews, 'Daniela', 5, 'great eats!')).toEqual([
@@ -83,7 +78,6 @@ describe('addReview', ()=>{
           ]);
     })
 });
-
 describe('getReviewByIndex', ()=>{
     it('getReviewByIndex returns a string', ()=>{
         expect(functions.getReviewByIndex(reviews, 0)).toBe("Daniela gave the restaurant a 5 star review, and their feedback was: Beautiful atmosphere and wonderful vegan options!");
@@ -92,10 +86,8 @@ describe('getReviewByIndex', ()=>{
         expect(functions.getReviewByIndex(reviews, 2)).toBe("Miranda gave the restaurant a 4 star review, and their feedback was: fun trivia and cool vibes");
     })
 });
-
 describe('getLastReview', ()=>{
     it('getLastReview returns a string', ()=>{
         expect(functions.getLastReview(reviews)).toBe(`Reyna gave the restaurant a 3.5 star review, and their feedback was: this place is chill with really cool people, great for getting work done on weekdays`);
     })
 });
-
